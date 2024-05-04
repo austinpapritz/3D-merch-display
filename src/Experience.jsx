@@ -2,7 +2,8 @@ import './style.css'
 import { useRef} from 'react'
 import { Canvas} from '@react-three/fiber'
 import { Bounds, Cylinder, OrbitControls, OrthographicCamera, PerspectiveCamera, View } from '@react-three/drei'
-import { NikeAirJordan } from './NikeAirJordan.jsx'
+import { NikeAirJordan } from '../public/nike_air_jordan/NikeAirJordan.jsx'
+import { AirMag } from '../public/nike_air_mag/AirMag.jsx'
 
 export default function Experience()
 {
@@ -16,6 +17,7 @@ export default function Experience()
         <ambientLight intensity={ 1.5 } />
         <Bounds fit clip observe margin={1.5}>
           <NikeAirJordan />
+          <AirMag />
         </Bounds>
       </View>
       <View index={2} className="view2">

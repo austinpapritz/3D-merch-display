@@ -1,0 +1,11 @@
+Model Information:
+* title:	Nike Air Mag
+* source:	https://sketchfab.com/3d-models/nike-air-mag-15ef47bad0aa4666b459cf78261abce5
+* author:	pandan (https://sketchfab.com/pandan)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Nike Air Mag" (https://sketchfab.com/3d-models/nike-air-mag-15ef47bad0aa4666b459cf78261abce5) by pandan (https://sketchfab.com/pandan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
