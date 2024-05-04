@@ -4,6 +4,7 @@ import { Canvas} from '@react-three/fiber'
 import { Bounds, Cylinder, OrbitControls, OrthographicCamera, PerspectiveCamera, View } from '@react-three/drei'
 import { NikeAirJordan } from '../public/nike_air_jordan/NikeAirJordan.jsx'
 import { AirMag } from '../public/nike_air_mag/AirMag.jsx'
+import { FilaSneaker } from '../public/fila_sneaker/FilaSneaker.jsx'
 
 export default function Experience()
 {
@@ -18,6 +19,7 @@ export default function Experience()
         <Bounds fit clip observe margin={1.5}>
           <NikeAirJordan />
           <AirMag />
+          <FilaSneaker />
         </Bounds>
       </View>
       <View index={2} className="view2">
