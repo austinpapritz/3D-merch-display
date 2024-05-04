@@ -31,7 +31,7 @@ export default function Experience()
           <NikeAirJordan />
         </View>
       )}
-      {activeView === 1 && (
+      {activeView === 3 && (
         <View index={2} className="view1">
           <OrbitControls makeDefault target={[0, 0, 0]}/>
           <OrthographicCamera makeDefault position={[0, 0, -500]} fov={35} />
@@ -40,11 +40,11 @@ export default function Experience()
           <AirMag />
         </View>
         )}
-      {activeView === 3 && (
+      {activeView === 1 && (
         <View index={3} className="view1">
           <OrbitControls makeDefault target={[0, 0, 0]}/>
           <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={35} />
-          <directionalLight position={[1, 2, 3]} intensity={4.5} />
+          <directionalLight position={[1, 2, 3]} intensity={0.5} />
           <ambientLight intensity={1.5} />
           <FilaSneaker />
         </View>
