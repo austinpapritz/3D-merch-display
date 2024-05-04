@@ -6,11 +6,8 @@ const Grid = styled.div`
   height: 100%;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: start;
   font-family: 'ThunderBlack';
-  font-size: 4em;
+  font-size: 3em;
   line-height: 2.5em;
   color: #fdb927;
   text-align: center;
@@ -21,16 +18,21 @@ const Grid = styled.div`
 `
 
 const Left = styled.div`
-  position: relative;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  width: 100%;
-  height: 100%;
-  padding-top: 200px;
-  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4em;
+  height: 4em;
+  padding: 30px;
   font-family: 'ThunderThin';
   line-height: 1em;
   background: #26282a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; 
+
   @media (max-width: 768px) {
     padding: 50px;
   }
@@ -43,6 +45,7 @@ const Right = styled.div`
   height: 100%;
   background: #fdb927;
   color: #26282a;
+  font-size: 1.2em;
 `
 
 const Sub = styled.div`
@@ -55,7 +58,7 @@ const Sub = styled.div`
 
 const Jumbo = styled.div`
   align-self: top;
-  padding: 25px;
+  padding-left: 2.7em;
   font-size: 2.2em;
   color: #26282a;
 `
@@ -81,6 +84,7 @@ const Label = styled.div`
 
 export default function Underlay() {
   return (
+    <>
     <Grid>
       <Left>
         <div>
@@ -88,7 +92,7 @@ export default function Underlay() {
           <br />
           STATE
           <br />
-          <img src="./Golden-State-Warriors-Logo-PNG-Picture.png" alt="Golden State Warriors" height="200px" />
+          <img src="./Golden-State-Warriors-Logo-PNG-Picture.png" alt="Golden State Warriors" height="150px" />
         </div>
       </Left>
       <Right>
@@ -96,5 +100,6 @@ export default function Underlay() {
       </Right>
       <Label>$149.99</Label>
     </Grid>
+    </>
   )
 }

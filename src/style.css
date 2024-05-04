@@ -36,15 +36,15 @@ body {
 .view2 {
   position: absolute;
   top: 20em;
-  right: 2em;
-  width: calc(250px - 5em);
-  height: calc(250px - 5em);
+  right: 0;
+  width: 20em;
+  height: 20em;
 }
 
 .view3 {
   position: absolute;
   top: 20em;
-  right: 65em;
-  width: calc(250px - 5em);
-  height: calc(250px - 5em);
+  left: 0;
+  width: 20em;
+  height: 20em;
 }

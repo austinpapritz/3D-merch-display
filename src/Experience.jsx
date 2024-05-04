@@ -22,37 +22,31 @@ export default function Experience()
 
     return (
     <main ref={ref} className="container">
-      {activeView === 1 && (
+      {activeView === 2 && (
         <View index={1} className="view1">
-          <OrbitControls makeDefault target={[0.35, 0, 0]}/>
-          <PerspectiveCamera makeDefault position={[-2.5, 0, 5]} fov={35} />
+          <OrbitControls makeDefault target={[0, 0, 0]}/>
+          <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={35} />
           <directionalLight position={[1, 2, 3]} intensity={4.5} />
           <ambientLight intensity={1.5} />
-          <Bounds fit clip observe margin={1.5}>
-            <NikeAirJordan />
-          </Bounds>
+          <NikeAirJordan />
         </View>
       )}
-      {activeView === 2 && (
+      {activeView === 1 && (
         <View index={2} className="view1">
-          <OrbitControls makeDefault target={[0.35, 0, 0]}/>
-          <PerspectiveCamera makeDefault position={[-2.5, 0, 5]} fov={35} />
+          <OrbitControls makeDefault target={[0, 0, 0]}/>
+          <OrthographicCamera makeDefault position={[0, 0, -500]} fov={35} />
           <directionalLight position={[1, 2, 3]} intensity={4.5} />
           <ambientLight intensity={1.5} />
-          <Bounds fit clip observe margin={1.5}>
-            <AirMag />
-          </Bounds>
+          <AirMag />
         </View>
         )}
       {activeView === 3 && (
         <View index={3} className="view1">
-          <OrbitControls makeDefault target={[0.35, 0, 0]}/>
-          <PerspectiveCamera makeDefault position={[-2.5, 0, 5]} fov={35} />
+          <OrbitControls makeDefault target={[0, 0, 0]}/>
+          <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={35} />
           <directionalLight position={[1, 2, 3]} intensity={4.5} />
           <ambientLight intensity={1.5} />
-          <Bounds fit clip observe margin={1.5}>
-            <FilaSneaker />
-          </Bounds>
+          <FilaSneaker />
         </View>
         )}
       {/* <View index={4} className="view2">
