@@ -15,7 +15,7 @@ export function FilaSneaker(props) {
   const { nodes, materials } = useGLTF('/fila_sneaker/scene-transformed.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.low_po_Default_0.geometry} material={materials.Default} position={[175.566, 18.604, -7.392]} rotation={[-1.82, 0.135, 1.207]} scale={100} />
+      <mesh geometry={nodes.low_po_Default_0.geometry} material={materials.Default} position={[0, 3.2, 0.245]} rotation={[-1.82, 0.135, 1.207]} scale={0.4} />
     </group>
   )
 }
