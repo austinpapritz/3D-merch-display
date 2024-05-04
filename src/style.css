@@ -44,7 +44,7 @@ body {
 .view3 {
   position: absolute;
   top: 20em;
-  right: 60em;
+  right: 65em;
   width: calc(250px - 5em);
   height: calc(250px - 5em);
 }

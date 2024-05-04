@@ -67,9 +67,9 @@ export default function Experience()
           <Cylinder scale={3} args={[ 0.01, 1, 1 ]}  position={[ 1, 0, 0 ]} rotation={[ 0, 0, 1.55 ]} material-color="blue" onClick={handleNextView}/>
         </Bounds>
       </View> */}
-    <Arrow index={4} classes={"view2"} position={[-2, 0, 0]} rotation={[0, 0, -Math.PI / 2]} onClick={handlePreviousView} />
+    <Arrow index={4} classes={"view2"} position={[0, 0, 0]} rotation={[0, 0, -Math.PI / 2]} onClick={handlePreviousView} />
 
-    <Arrow index={5} classes={"view3"} position={[2, 0, 0]} rotation={[0, 0, Math.PI / 2]} onClick={handleNextView} />
+    <Arrow index={5} classes={"view3"} position={[0, 0, 0]} rotation={[0, 0, Math.PI / 2]} onClick={handleNextView} />
 
     <Canvas eventSource={ref} className="canvas" camera={ {
         fov: 45,
