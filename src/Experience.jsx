@@ -1,8 +1,9 @@
 import './style.css'
-import { Suspense, useRef} from 'react'
+import { useRef} from 'react'
 import { Canvas} from '@react-three/fiber'
 import { Bounds, Cylinder, OrbitControls, OrthographicCamera, PerspectiveCamera, View } from '@react-three/drei'
 import { NikeAirJordan } from './NikeAirJordan.jsx'
+// import { NewBalance } from './NewBalance.jsx'
 
 export default function Experience()
 {
@@ -16,6 +17,7 @@ export default function Experience()
         <ambientLight intensity={ 1.5 } />
         <Bounds fit clip observe margin={1.5}>
           <NikeAirJordan />
+          {/* <NewBalance /> */}
         </Bounds>
       </View>
       <View index={2} className="view2">

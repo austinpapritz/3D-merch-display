@@ -13,7 +13,7 @@ import { useFrame } from '@react-three/fiber'
 
 export function NikeAirJordan(props) {
   const ref = useRef()
-  const { nodes, materials } = useGLTF('/scene-transformed.glb')
+  const { nodes, materials } = useGLTF('/nike-air-jordan-transformed.glb')
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
     ref.current.rotation.set(0.01 + Math.cos(t / 20) / 10, Math.sin(t / 4) / 4, 0)
@@ -75,4 +75,4 @@ export function NikeAirJordan(props) {
   )
 }
 
-useGLTF.preload('/scene-transformed.glb')
+useGLTF.preload('/nike-air-jordan-transformed.glb')
