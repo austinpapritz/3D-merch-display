@@ -11,7 +11,6 @@ export default function Experience()
   const ref = useRef()
 
   const [activeView, setActiveView] = useState(1);
-  const [hidden, set] = useState()
 
   const handleNextView = () => {
     setActiveView((current) => (current % 3) + 1);
