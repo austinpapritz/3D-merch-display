@@ -10,12 +10,27 @@ Title: Nike Air Mag
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
 
 export function AirMag(props) {
   const { nodes, materials } = useGLTF('/nike_air_mag/air-mag-transformed.glb')
+  const ref = useRef()
+  useFrame((state) => {
+    const t = state.clock.getElapsedTime()
+    ref.current.rotation.set(0.01 + Math.cos(t / 20) / 10, Math.sin(t / 4) / 4, 0)
+    ref.current.position.y = (1 + Math.sin(t / 10)) / 10
+  })
   return (
-    <group {...props} dispose={null}>
-      <mesh geometry={nodes.Object_2.geometry} material={materials.StingrayPBS1SG} position={[0, 0.232, 0.245]} rotation={[-1.826, 0, 0]} scale={0.011} />
+    <group 
+      {...props} 
+      dispose={null} 
+      ref={ref} 
+      scale={7}>
+      <mesh 
+        geometry={nodes.Object_2.geometry} 
+        material={materials.StingrayPBS1SG} 
+        position={[0, -5, 0]} 
+        rotation={[Math.PI / 2, 3, 0]}  />
     </group>
   )
 }
