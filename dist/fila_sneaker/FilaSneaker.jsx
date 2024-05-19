@@ -17,15 +17,15 @@ export function FilaSneaker(props) {
   const ref = useRef()
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
-    ref.current.rotation.set(0.01 + Math.cos(t / 20) / 10, Math.sin(t / 4) / 4, 0)
-    ref.current.position.y = (1 + Math.sin(t / 10)) / 10
+    ref.current.rotation.set(0.01 + Math.cos(t / 4) / 10, Math.sin(t / 2) / 4, 0)
+    ref.current.position.y = (1 + Math.sin(t / 4)) / 10
   })
   return (
-    <group {...props} dispose={null} ref={ref} scale={1}>
+    <group {...props} dispose={null} ref={ref} scale={2}>
       <mesh 
         geometry={nodes.low_po_Default_0.geometry} 
         material={materials.Default} 
-        position={[0, 7.9, 0]} 
+        position={[0, 8.2, 0]} 
         rotation={[-1.82, 0.135, 1.207]} 
         />
     </group>

@@ -27,6 +27,24 @@ export default function Experience()
         <button className='btn prev' name="arrow-back-outline" onClick={handlePreviousView}>PREV</button>
         <button className='btn next' name="arrow-forward-outline" onClick={handleNextView}>NEXT</button>
       </nav>
+      <div class="menu-wrapper">
+        <button id="backBtn" class="btn" type="submit">BACK</button>
+        <div class="menu-content">
+          <form class="menu-form">
+            <label for="size" class="size-container">Size
+              <input class="size-input" name="size" type="number" min="5" max="16"/>
+            </label>
+            <label for="color" class="color-container">Color
+              <div class="color-btn-wrapper">
+                <button class="blue-white color-btn"></button>
+                <button class="gold-white color-btn"></button>
+                <button class="red-white color-btn"></button>
+              </div>
+            <button type="submit" id="bundleBtn">Bundle to Save</button>
+            </label>
+          </form>
+        </div>
+      </div>
       <Canvas eventSource={ref} className="canvas" camera={ {
         fov: 45,
         near: 0.1,
