@@ -21,7 +21,7 @@ export function NikeAirJordan(props) {
   })
   return (
     <group {...props} dispose={null} ref={ref}>
-      <group scale={0.5} position={[0, -0.11, 0]} rotation={[-0.05, 2, 0]}>
+      <group scale={1} position={[0, 0.5, 0]} rotation={[-0.05, 2, 0]}>
         <mesh geometry={nodes.Object_4.geometry} material={materials.Main} position={[0.35, -0.46, 1.02]} rotation={[-Math.PI, 0, -Math.PI]} />
         <mesh geometry={nodes.Object_6.geometry} material={materials.Main} position={[0.68, 0.2, 0.98]} rotation={[1.56, 0.07, Math.PI / 2]} />
         <mesh geometry={nodes.Object_8.geometry} material={materials.Main} position={[-0.08, 0.53, 1.1]} rotation={[0, -Math.PI / 2, 0]} />

@@ -14,11 +14,11 @@ export default function Experience()
   const [activeView, setActiveView] = useState(1);
 
   const handleNextView = () => {
-    setActiveView((current) => (current % 4) + 1);
+    setActiveView((current) => (current % 3) + 1);
   };
 
   const handlePreviousView = () => {
-    setActiveView((current) => (current === 1 ? 4 : current - 1));
+    setActiveView((current) => (current === 1 ? 3 : current - 1));
   };
     return (
     <main ref={ref} className="container">
@@ -34,14 +34,15 @@ export default function Experience()
       } }>
         <OrbitControls makeDefault target={[ 0, 0, 0 ]}/>
         <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={35} />
-        <directionalLight position={[ 1, 2, 3 ]} intensity={4.5} />
-        <ambientLight intensity={1.5} />
+        <directionalLight position={[ 1, 2, 25 ]} intensity={1} />
+        <ambientLight intensity={3} />
         <Suspense fallback={null}>
           <Floor position={[ 1, -1 , -6]} rotation={[ -5, 0, 0 ]} />
           {activeView === 1 && <NikeAirJordan />}
           {activeView === 2 && <AirMag />}
           {activeView === 3 && <FilaSneaker />}
             <ContactShadows position={[0, -1, 0]} opacity={.5} scale={10} blur={3} far={10} resolution={256} color="#000000" />
+          <Floor position={[ 1, -1 , -6]} rotation={[ -5, 0, 0 ]} />
         </Suspense>
       </Canvas>
     </main>
@@ -57,13 +58,14 @@ function Floor() {
   ]);
 
   return (
-    <mesh>
-      <planeGeometry attach="geometry" args={[25, 25]} />
+    <mesh position={[0, -1.2, -1]} rotation={[-Math.PI / 2, 0, 0]}>
+      <planeGeometry attach="geometry" args={[55, 55]} />
       <meshStandardMaterial 
         map={diffusionMap} 
         displacementMap={displacementMap} 
         roughnessMap={roughnessMap} 
-        roughness={1} />
+        roughness={0.1} 
+        side={THREE.DoubleSide} />
     </mesh>
   );
 }

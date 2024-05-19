@@ -21,11 +21,11 @@ export function FilaSneaker(props) {
     ref.current.position.y = (1 + Math.sin(t / 10)) / 10
   })
   return (
-    <group {...props} dispose={null} ref={ref} scale={1}>
+    <group {...props} dispose={null} ref={ref} scale={2}>
       <mesh 
         geometry={nodes.low_po_Default_0.geometry} 
         material={materials.Default} 
-        position={[0, 7.9, 0]} 
+        position={[0, 8.2, 0]} 
         rotation={[-1.82, 0.135, 1.207]} 
         />
     </group>

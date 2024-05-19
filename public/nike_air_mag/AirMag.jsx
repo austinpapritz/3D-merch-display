@@ -25,11 +25,11 @@ export function AirMag(props) {
       {...props} 
       dispose={null} 
       ref={ref} 
-      scale={7}>
+      scale={0.05}>
       <mesh 
         geometry={nodes.Object_2.geometry} 
         material={materials.StingrayPBS1SG} 
-        position={[0, 2, 0]} 
+        position={[0, 15, 0]} 
         rotation={[Math.PI / 2, 3, 0]}  />
     </group>
   )
