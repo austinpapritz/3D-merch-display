@@ -2,11 +2,11 @@ import * as THREE from 'three'
 import './style.css'
 import { Suspense, useRef, useState} from 'react'
 import { Canvas, useLoader } from '@react-three/fiber'
-import { Box, ContactShadows, OrbitControls, OrthographicCamera, PerspectiveCamera, Plane, useTexture } from '@react-three/drei'
+import { ContactShadows, OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { NikeAirJordan } from '../public/nike_air_jordan/NikeAirJordan.jsx'
 import { AirMag } from '../public/nike_air_mag/AirMag.jsx'
 import { FilaSneaker } from '../public/fila_sneaker/FilaSneaker.jsx'
-import { TextureLoader } from "three/src/loaders/TextureLoader";
+
 export default function Experience()
 {
   const ref = useRef()
@@ -19,6 +19,7 @@ export default function Experience()
 
   const handlePreviousView = () => {
     setActiveView((current) => (current === 1 ? 3 : current - 1));
+
   };
     return (
     <main ref={ref} className="container">
@@ -32,8 +33,13 @@ export default function Experience()
         far: 200,
         position: [ 0, 0, 1.1 ]
       } }>
-        <OrbitControls makeDefault target={[ 0, 0, 0 ]}/>
-        <PerspectiveCamera makeDefault position={[0, 0, 5]} fov={35} />
+        <OrbitControls 
+          makeDefault target={[ 0, 0, 0 ]}  
+          minAzimuthAngle={-Math.PI / 1}
+          maxAzimuthAngle={Math.PI / 1}
+          minPolarAngle={Math.PI / 3}
+          maxPolarAngle={Math.PI - Math.PI / 2}/>
+        <PerspectiveCamera makeDefault position={[0, 0, 10]} fov={35} />
         <directionalLight position={[ 1, 2, 25 ]} intensity={1} />
         <ambientLight intensity={3} />
         <Suspense fallback={null}>

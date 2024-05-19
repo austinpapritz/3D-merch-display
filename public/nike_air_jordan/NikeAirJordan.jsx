@@ -16,8 +16,8 @@ export function NikeAirJordan(props) {
   const ref = useRef()
   useFrame((state) => {
     const t = state.clock.getElapsedTime()
-    ref.current.rotation.set(0.01 + Math.cos(t / 20) / 10, Math.sin(t / 4) / 4, 0)
-    ref.current.position.y = (1 + Math.sin(t / 10)) / 10
+    ref.current.rotation.set(0.01 + Math.cos(t / 4) / 10, Math.sin(t / 2) / 4, 0)
+    ref.current.position.y = (1 + Math.sin(t / 4)) / 10
   })
   return (
     <group {...props} dispose={null} ref={ref}>
