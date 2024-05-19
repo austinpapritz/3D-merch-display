@@ -25,7 +25,7 @@ export function FilaSneaker(props) {
       <mesh 
         geometry={nodes.low_po_Default_0.geometry} 
         material={materials.Default} 
-        position={[0, 8, 0]} 
+        position={[0, 7.9, 0]} 
         rotation={[-1.82, 0.135, 1.207]} 
         />
     </group>
