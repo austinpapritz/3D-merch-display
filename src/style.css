@@ -129,7 +129,9 @@ body {
 }
 
 .size-input {
+  background: rgba(51,51,51, .75);
   width: 50%;
+  border: none;
 }
 
 .color-container {
@@ -138,7 +140,7 @@ body {
   display:flex;
   justify-content: space-around;
   align-items: center;
-  gap: 0px;
+  gap: 5px;
 }
 
 .color-btn {
@@ -180,11 +182,16 @@ body {
   bottom: 0;
   left: auto;
   margin: 2em;
-  background-image: linear-gradient(45deg, #f1ecec 0%, #00FF00 50%);
+  background-image: linear-gradient(45deg, #95c98e 0%, #00FF00 100%);
   font-size: 1.5em;
   color: #fff;
   border-radius: 40px;
   border: none;
   padding: 10px;
   box-shadow: 3px 3px 15px 1px rgba(0, 0, 0, .50);
+}
+
+#bundleBtn:hover {
+  background-image: linear-gradient(45deg, #1ad216 0%, #00FF00 100%);
+  box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, .70);
 }
