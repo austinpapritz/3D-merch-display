@@ -24,11 +24,11 @@ export default function Experience()
     return (
     <main ref={ref} className="container">
       <nav className="nav">
-        <button id="prevBtn" className="btn color-bt" type="button">PREV</button>
+        <button id="prevBtn" className="btn color-bt" type="button" onClick={handlePreviousView}>PREV</button>
         <button id="nextBtn" className="btn color-bt" type="button" onClick={handleNextView}>NEXT</button>
       </nav>
       <div className="menu-wrapper">
-        <button id="backBtn" type="button" onClick={handlePreviousView}>BACK</button>
+        <button id="backBtn" type="button">BACK</button>
         <div className="menu-content">
           <form className="menu-form">
             <label name="size" className="size-container">Size
@@ -40,7 +40,7 @@ export default function Experience()
                 <button className="btn gold-white color-btn"></button>
                 <button className="btn red-white color-btn"></button>
               </div>
-            <button type="button" id="bundleBtn">Bundle to Save</button>
+            <button type="button" id="bundleBtn" >Bundle to Save</button>
             </label>
           </form>
         </div>
