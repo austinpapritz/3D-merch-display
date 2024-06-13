@@ -57,7 +57,7 @@ export default function Experience()
           maxAzimuthAngle={Math.PI / 1}
           minPolarAngle={Math.PI / 3}
           maxPolarAngle={Math.PI - Math.PI / 2}/>
-        <PerspectiveCamera makeDefault position={[0, 0, 10]} fov={35} />
+        <PerspectiveCamera makeDefault position={[0, 5, 15]} fov={35} />
         <directionalLight position={[ 1, 2, 25 ]} intensity={1} />
         <ambientLight intensity={3} />
         <Suspense fallback={null}>
