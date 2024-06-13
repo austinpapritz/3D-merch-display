@@ -33,7 +33,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 33px;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
@@ -106,7 +106,7 @@ body {
 }
 
 .menu-content {
-  height: 40%;
+  height: 50%;
   width: 12%;
   background: rgba(31, 31, 31, 0.5);
   padding: 10px;
