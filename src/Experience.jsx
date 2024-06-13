@@ -22,27 +22,27 @@ export default function Experience()
 
   };
     return (
-    <main ref={ref} className="container">
-      <nav className="nav">
+    <main ref={ref} className="static-elements-container">
+      <section className="arrows-container">
         <button id="prevBtn" type="button" onClick={handlePreviousView}></button>
         <button id="nextBtn" type="button" onClick={handleNextView}></button>
-      </nav>
-      <div className="menu-wrapper">
+      </section>
+      <div className="backBtn-checkout-menu-wrapper">
         <button id="backBtn" type="button">BACK</button>
-        <div className="menu-content">
-          <div className="menu-form">
-            <label name="size" className="size-container">Size
-              <input className="size-input" name="size" type="number" min="5" max="16" placeholder="6"/>
-            </label>
-            <label name="color" className="color-container">Color
-              <div className="color-btn-wrapper">
-                <button className="blue-white color-btn"></button>
-                <button className="gold-white color-btn"></button>
-                <button className="red-white color-btn"></button>
-              </div>
-            </label>
-            <button id="bundleBtn" type="button" >Bundle to Save</button>
+        <div className="size-and-color-menu-container">
+          <div className="size-selection-container">
+            <label name="size" className="size-label">Size</label>
+            <input className="size-input" name="size" type="number" min="5" max="16" placeholder="6"/>
           </div>
+          <div className="color-selection-container">
+            <label name="color" className="color-label">Color</label>
+            <div className="color-btn-wrapper">
+              <button className="blue-white color-btn"></button>
+              <button className="gold-white color-btn"></button>
+              <button className="red-white color-btn"></button>
+            </div>
+          </div>
+          <button id="bundleBtn" type="button" >Bundle to Save</button>
         </div>
       </div>
       <Canvas eventSource={ref} className="canvas" camera={ {
@@ -62,9 +62,9 @@ export default function Experience()
         <ambientLight intensity={3} />
         <Suspense fallback={null}>
           <Floor position={[ 1, -1 , -6]} rotation={[ -5, 0, 0 ]} />
-          {activeView === 1 && <NikeAirJordan />}
-          {activeView === 2 && <AirMag />}
-          {activeView === 3 && <FilaSneaker />}
+            {activeView === 1 && <NikeAirJordan />}
+            {activeView === 2 && <AirMag />}
+            {activeView === 3 && <FilaSneaker />}
             <ContactShadows position={[0, -1, 0]} opacity={.5} scale={10} blur={3} far={10} resolution={256} color="#000000" />
           <Floor position={[ 1, -1 , -6]} rotation={[ -5, 0, 0 ]} />
         </Suspense>
