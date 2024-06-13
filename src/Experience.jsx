@@ -24,13 +24,13 @@ export default function Experience()
     return (
     <main ref={ref} className="container">
       <nav className="nav">
-        <button id="prevBtn" className="btn color-bt" type="button" onClick={handlePreviousView}>PREV</button>
-        <button id="nextBtn" className="btn color-bt" type="button" onClick={handleNextView}>NEXT</button>
+        <button id="prevBtn" className="btn color-bt" type="button" onClick={handlePreviousView}></button>
+        <button id="nextBtn" className="btn color-bt" type="button" onClick={handleNextView}></button>
       </nav>
       <div className="menu-wrapper">
         <button id="backBtn" type="button">BACK</button>
         <div className="menu-content">
-          <form className="menu-form">
+          <div className="menu-form">
             <label name="size" className="size-container">Size
               <input className="size-input" name="size" type="number" min="5" max="16"/>
             </label>
@@ -42,7 +42,7 @@ export default function Experience()
               </div>
             <button type="button" id="bundleBtn" >Bundle to Save</button>
             </label>
-          </form>
+          </div>
         </div>
       </div>
       <Canvas eventSource={ref} className="canvas" camera={ {
