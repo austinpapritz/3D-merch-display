@@ -24,24 +24,24 @@ export default function Experience()
     return (
     <main ref={ref} className="container">
       <nav className="nav">
-        <button id="prevBtn" className="btn color-bt" type="button" onClick={handlePreviousView}></button>
-        <button id="nextBtn" className="btn color-bt" type="button" onClick={handleNextView}></button>
+        <button id="prevBtn" type="button" onClick={handlePreviousView}></button>
+        <button id="nextBtn" type="button" onClick={handleNextView}></button>
       </nav>
       <div className="menu-wrapper">
         <button id="backBtn" type="button">BACK</button>
         <div className="menu-content">
           <div className="menu-form">
             <label name="size" className="size-container">Size
-              <input className="size-input" name="size" type="number" min="5" max="16"/>
+              <input className="size-input" name="size" type="number" min="5" max="16" placeholder="6"/>
             </label>
             <label name="color" className="color-container">Color
               <div className="color-btn-wrapper">
-                <button className="btn blue-white color-btn"></button>
-                <button className="btn gold-white color-btn"></button>
-                <button className="btn red-white color-btn"></button>
+                <button className="blue-white color-btn"></button>
+                <button className="gold-white color-btn"></button>
+                <button className="red-white color-btn"></button>
               </div>
-            <button type="button" id="bundleBtn" >Bundle to Save</button>
             </label>
+            <button id="bundleBtn" type="button" >Bundle to Save</button>
           </div>
         </div>
       </div>
